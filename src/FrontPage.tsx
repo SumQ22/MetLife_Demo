@@ -28,7 +28,7 @@ export class FrontPage extends Component<{}, MyState> {
     };
 
     componentDidMount () {
-        axios.get('http://localhost:8081/list')
+        axios.get('https://springboot-studentdemo-app.herokuapp.com/list') //https://springboot-studentdemo-app.herokuapp.com, http://localhost:8081
         .then(res => {
             const students = res.data
 
@@ -141,7 +141,7 @@ function renderStudent(st) {
     )
 }
 function deleteStudent(id: any): void {
-    axios.post(`http://localhost:8081/delete/${id}`)
+    axios.post(`https://springboot-studentdemo-app.herokuapp.com/delete/${id}`) //https://springboot-studentdemo-app.herokuapp.com, http://localhost:8081
     window.location.reload();
 }
 
