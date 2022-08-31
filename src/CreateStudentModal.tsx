@@ -23,7 +23,7 @@ export class CreateStudentModal extends Component<MyProps> {
         axios.post("https://springboot-studentdemo-app.herokuapp.com/create", student) //https://springboot-studentdemo-app.herokuapp.com, http://localhost:8081 
         this.props.toggle();
 
-        window.location.reload();
+        //window.location.reload();
     }
 
     render() {
