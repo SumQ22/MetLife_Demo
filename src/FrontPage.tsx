@@ -92,7 +92,8 @@ export class FrontPage extends Component<{}, MyState> {
                                     Submit Student to List Here
                                 </CardText>
                                 <Button block color="success" onClick= {this.toggle}>Add Student Entry</Button>
-                                <Button block color="primary" onClick={() => window.location.reload()}>Render List</Button>
+                                <br/>
+                                <Button block color="primary" size="sm" onClick={() => window.location.reload()}>Render List</Button>
                             </Card>
                         </Col>
                     </Row>
