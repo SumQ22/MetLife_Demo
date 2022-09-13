@@ -4,6 +4,8 @@ import {Component, ReactNode} from "react";
 
 //import Navbar from "reactstrap/es/Navbar";
 
+import SearchBox from "./SearchBox";
+
 import { Button, Card, CardBody, CardFooter, CardText, CardTitle, Col, Container, Navbar, NavbarBrand, Row } from "reactstrap";
 import {
     IoSchoolOutline,
@@ -12,6 +14,7 @@ import {
 } from "react-icons/io5";
 import axios from "axios";
 import { CreateStudentModal } from "./CreateStudentModal";
+
 
 
 interface MyState {
@@ -99,10 +102,26 @@ export class FrontPage extends Component<{}, MyState> {
                     </Row>
                 </Container>
 
+                <Container>
+                    <Row>
+                            <Col lg>
+                                <Card body>
+                                <CardTitle>Student List Search Function</CardTitle>
+                                     <SearchBox />
+                                </Card>
+                            </Col>
+                    </Row>
+
+                </Container>
+
+            
+
                 <Container className="mt-4">
                     {this.state.students.map(student => renderStudent(student))}
                 </Container>
+
             </div>
+
         );
     }
 
